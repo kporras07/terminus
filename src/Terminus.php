@@ -81,7 +81,7 @@ class Terminus implements ConfigAwareInterface, ContainerAwareInterface, LoggerA
         $this->addPluginsCommandsAndHooks();
 
         if (\Phar::running(true)) {
-            $cmd = new SelfUpdateCommand('Terminus', $config->get('version'), 'pantheon-systems/terminus');
+            $cmd = new SelfUpdateCommand('Terminus', $config->get('version'), 'kporras07/terminus');
             $application->add($cmd);
         }
 
